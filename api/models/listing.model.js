@@ -22,19 +22,20 @@ const listingSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    bathrooms: {
+    unit: {
+      type: String, // Changed from Number to String
+      required: true,
+      enum: ['Kg', 'G'], // Limits the unit to Kg or G
+    },
+    quantity: {
       type: Number,
       required: true,
     },
-    bedrooms: {
-      type: Number,
-      required: true,
-    },
-    furnished: {
+    nonperishable: {
       type: Boolean,
       required: true,
     },
-    parking: {
+    nonGmo: {
       type: Boolean,
       required: true,
     },
